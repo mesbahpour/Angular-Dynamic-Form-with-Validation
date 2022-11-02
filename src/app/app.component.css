@@ -1,0 +1,15 @@
+.main-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: calc(100vh - var(--header-height) - var(--breadcrumb-height) - var(--breadcrumb-margin));
+  height: 100%;
+}
+
+.main-container .body-container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/*# sourceMappingURL=app.component.css.map */

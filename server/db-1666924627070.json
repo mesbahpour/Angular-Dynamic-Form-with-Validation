@@ -1,0 +1,86 @@
+{
+  "product": [
+    {
+      "productName": "گوشی موبایل",
+      "date": "2022-10-07",
+      "companyId": "2",
+      "status": true,
+      "id": 1
+    },
+    {
+      "productName": "گوشی موبایل",
+      "date": "2022-10-07",
+      "companyId": "1",
+      "status": false,
+      "id": 2
+    },
+    {
+      "productName": "یخچال",
+      "date": "2022-10-06",
+      "companyId": "1",
+      "status": true,
+      "id": 3
+    },
+    {
+      "productName": "یخچال",
+      "date": "2022-09-29",
+      "companyId": "2",
+      "status": false,
+      "id": 4
+    },
+    {
+      "productName": "یخچال",
+      "date": "2022-09-29",
+      "companyId": "2",
+      "status": true,
+      "id": 5
+    },
+    {
+      "productName": "یخچال",
+      "date": "2022-10-13",
+      "companyId": "2",
+      "status": true,
+      "id": 6
+    },
+    {
+      "productName": "یخچال",
+      "date": "2022-10-03",
+      "companyId": "1",
+      "status": true,
+      "id": 7
+    },
+    {
+      "productName": "محصول یک",
+      "date": "2022-10-11",
+      "companyId": "2",
+      "status": true,
+      "id": 8
+    }
+  ],
+  "company": [
+    {
+      "companyName": "سامسونگ",
+      "tel": "1",
+      "type": "لوازم خانگی",
+      "id": 1
+    },
+    {
+      "companyName": "هواوی",
+      "tel": "2",
+      "type": "لوازم الکترونیکی",
+      "id": 2
+    },
+    {
+      "companyName": "سامسونگ",
+      "tel": "1",
+      "type": "لوازم خانگی",
+      "id": 3
+    },
+    {
+      "companyName": "سامسونگ",
+      "tel": "1",
+      "type": "لوازم خانگی",
+      "id": 4
+    }
+  ]
+}

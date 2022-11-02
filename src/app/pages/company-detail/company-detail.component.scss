@@ -1,0 +1,36 @@
+div {
+    margin: 10px;
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      border-radius: 10px;
+      z-index: -1000;
+  
+      th, td {
+        text-align: center;
+        padding: 8px;
+      }
+      
+      th{
+        background-color: var(--primary);
+        color: #fff;
+        &:first-child{
+            border-top-right-radius: 10px;
+          }
+          
+          &:last-child{
+            border-top-left-radius: 10px;
+          }
+      }
+  
+      tr {
+        background-color: var(--table-background);
+  
+        .fa {
+          color: gray;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,34 @@
+{
+  "style": {
+    "hasSubmitButton": true,
+    "hasResetButton": true,
+    "display": "block",
+    "hasLabel": false,
+    "buttonType" :1,
+    "buttonLabel": "ورود"
+  },
+  "data": [{
+    "username": {
+      "label": "نام کاربری",
+      "width": 100,
+      "value": "admin",
+      "type": "text",
+      "validation": {
+        "required": true,
+        "minLength": 5,
+        "maxLength": 10
+      }
+    },
+    "password": {
+      "label": "گذرواژه",
+      "width": 100,
+      "value": "admin",
+      "type": "password",
+      "validation": {
+        "required": true,
+        "minLength": 5,
+        "maxLength": 10
+      }
+    }
+  }]
+}

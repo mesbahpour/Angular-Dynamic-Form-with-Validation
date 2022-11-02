@@ -1,0 +1,26 @@
+<div *ngIf="router.url !== '/'" class="container" [class]="(isMenuOpen)?'opened-menu':'closed-menu'">
+  <ul>
+    <li>
+      <a [routerLink]="['/dashboard/company']" routerLinkActive="is-active">
+        <i class="fa fa-home"></i>
+        <span  [ngStyle]="isMenuOpen ? {'opacity': 100} : {'opacity': 0}">شرکت ها </span>
+        <span class="divider"></span></a>
+    </li>
+
+  <li>
+    <a [routerLink]="['/dashboard/product']" routerLinkActive="is-active">
+      <i class="fa fa-home"></i>
+      <span  [ngStyle]="isMenuOpen ? {'opacity': 100} : {'opacity': 0}">  محصولات </span>
+      <span class="divider"></span></a>
+  </li>
+
+  </ul>
+
+  <div class="toggle"><i class="fa fa-home" (click)="toggle()"></i>
+
+
+</div>
+</div>
+
+
+

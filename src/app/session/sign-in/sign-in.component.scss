@@ -1,0 +1,58 @@
+.box-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:  calc(100vh - var(--header-height));
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.623)),url('../../../assets/images/img/group-business-people-having-meeting-min.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container {
+        position: absolute;
+        z-index: 10;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+    
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .field-container{
+        width: auto !important;
+        max-width: 400px;
+
+    }
+    }
+
+    @media screen and (min-width: 600px) {
+
+        .field-container{
+            width: 400px;
+    
+        }
+        }

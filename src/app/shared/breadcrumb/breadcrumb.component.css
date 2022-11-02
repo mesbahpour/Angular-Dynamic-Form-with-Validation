@@ -1,0 +1,117 @@
+.container {
+  width: 100%;
+  height: var(--beadcrumnb-height);
+  background-color: var(--panel_background);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .bread-crumbs {
+  margin: var(--container-margin);
+}
+
+.container .bread-crumbs p:first-child {
+  color: var(--menu);
+}
+
+.container .bread-crumbs p:first-child::after {
+  content: "";
+  display: block;
+  /* So we can set a width */
+  width: 150px;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+}
+
+.container .bread-crumbs p:nth-child(2) {
+  color: var(--primary);
+  font-size: 10px;
+}
+
+.container .buttons {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120px;
+  width: 700px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container .buttons .home, .container .buttons .back {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 40px;
+  text-align: center;
+  cursor: pointer;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 35px;
+  overflow: hidden;
+}
+
+.container .buttons .home a, .container .buttons .back a {
+  display: none;
+}
+
+.container .buttons .home.back, .container .buttons .back.back {
+  top: 17px;
+  border: 2px solid #00a6a0;
+  border-left: none;
+  background-color: var(--success-light);
+}
+
+.container .buttons .home.back img, .container .buttons .back.back img {
+  width: 8px;
+}
+
+.container .buttons .home.home, .container .buttons .back.home {
+  top: 60px;
+  border: 2px solid #3c80aa;
+  border-left: none;
+  background-color: var(--medium-light);
+}
+
+.container .buttons .home.home img, .container .buttons .back.home img {
+  width: 15px;
+}
+
+.container .buttons .home:hover, .container .buttons .back:hover {
+  width: 100px;
+}
+
+.container .buttons .home:hover a, .container .buttons .back:hover a {
+  display: inline;
+  text-decoration: none;
+  color: var(--menu);
+}
+
+.border {
+  width: 100%;
+  height: var(--breadcrumb-border);
+  background-color: var(--primary);
+  -webkit-box-shadow: 0px -4px 3px rgba(173, 173, 173, 0.75);
+          box-shadow: 0px -4px 3px rgba(173, 173, 173, 0.75);
+}
+/*# sourceMappingURL=breadcrumb.component.css.map */

@@ -1,0 +1,5 @@
+<dynamic-form [formJson]="formConfig" (output)="submit($event)" [styleConfig] ="styleConfig"></dynamic-form> 
+
+<app-dynamic-table [columns]="cols" [data]="companies" [faColumns]="faColumns" [hasDetailButton]="hasDetailButton" (showDetailBtn)="getCompanyId($event)"></app-dynamic-table>
+
+<router-outlet></router-outlet>

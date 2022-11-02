@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="title">
+        <span>سیستم مدیریت محصولات</span>
+        <!-- <small>پنل مدیریت محصولات</small> -->
+    </div>
+    <div class="user"  *ngIf = "isLoggedIn$">
+        <div>
+        <div class="username title">دوســـــــــت عزیز خوش آمدید</div>
+        <small style="font-size: 12px; cursor: pointer; z-index: 100; position: relative;" (click)="logout()">خروج از حساب کاربری</small>
+        </div>
+        <img src="../../../../assets/images/img/Default-Profile-Female.jpg" alt="profile">
+    </div>
+    <div class="topleft">
+    </div>
+</div>
+
+<app-breadcrumb></app-breadcrumb>

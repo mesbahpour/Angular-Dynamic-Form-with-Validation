@@ -1,0 +1,12 @@
+<div class="container" *ngIf="router.url !== '/'">
+    <div class="bread-crumbs">
+        <p> تعداد محصولات ثبت شده ({{productCount}})</p>
+        <p>خانه > منو یک > منو دو</p>
+    </div>
+    <div class="buttons">
+        <button class="back" (click)="goBack()"> <img src="../../../assets/images/icon/return.svg" alt="return"><a>بازگشت</a></button>
+        <button class="home" (click)="goToHomepage()"> <img src="../../../assets/images/icon/home.svg" alt="home"> <a>خانه</a></button>
+    </div>
+</div>
+
+<div class="border" *ngIf="router.url !== '/'"></div>

@@ -1,0 +1,101 @@
+<div class="form-group" *ngIf="forms">
+  <div *ngFor="let f of forms" style="width: 100%">
+    <form [formGroup]="f.formGroup" [style.display]="styleConfig?.display"
+      [ngClass]="{' form-style': isLoginPage === true}">
+      <div *ngFor="let prop of f.metaData" class="form-container" [style.width.%]="styleConfig?.width">
+        <label [attr.for]="prop" *ngIf="styleConfig?.hasLabel"><span style="color: red;"
+            *ngIf="prop.validation.required">*</span>{{prop.label}}</label>
+        <ng-container [ngSwitch]="prop.type">
+          <input *ngSwitchCase="'text'" class="form-control" [formControlName]="prop.key" [id]="prop.key"
+            [type]="prop.type" [style.width.%]="prop.width" [placeholder]="prop.label + ' '+ 'را وارد کنید '">
+          <input *ngSwitchCase="'password'" class="form-control" [formControlName]="prop.key" [id]="prop.key"
+            [type]="prop.type" [style.width.%]="prop.width" [placeholder]="prop.label + ' '+ 'را وارد کنید '">
+          <input *ngSwitchCase="'file'" type="file" [id]="prop.key" [formControlName]="prop.key">
+          <input *ngSwitchCase="'checkbox'" type="checkbox" [id]="prop.key" [value]="prop.value"
+            [formControlName]="prop.key">
+          <input *ngSwitchCase="'email'" type="email" [id]="prop.key" [value]="prop.value" [formControlName]="prop.key"
+            [placeholder]="prop.label + ' '+ 'را وارد کنید '">
+          <input *ngSwitchCase="'date'" type="date" [id]="prop.key" [value]="prop.value" [formControlName]="prop.key"
+            [placeholder]="prop.label + ' '+ 'را وارد کنید '">
+          <input *ngSwitchCase="'datetime'" type="datetime" [id]="prop.key" [value]="prop.value"
+            [formControlName]="prop.key" [placeholder]="prop.label + ' '+ 'را وارد کنید '">
+          <input *ngSwitchCase="'datetime-local'" type="datetime-local" [id]="prop.key" [value]="prop.value"
+            [formControlName]="prop.key" [placeholder]="prop.label + ' '+ 'را وارد کنید '">
+          <input *ngSwitchCase="'number'" type="number" [id]="prop.key" [value]="prop.value"
+            [formControlName]="prop.key" [placeholder]="prop.label + ' '+ 'را وارد کنید '">
+          <input *ngSwitchCase="'reset'" type="reset" [id]="prop.key" [value]="prop.value" [formControlName]="prop.key">
+          <input *ngSwitchCase="'tel'" type="tel" [id]="prop.key" [value]="prop.value" [formControlName]="prop.key"
+            [placeholder]="prop.label + ' '+ 'را وارد کنید '">
+          <input *ngSwitchCase="'url'" type="url" [id]="prop.key" [value]="prop.value" [formControlName]="prop.key">
+
+          <select [formControlName]="prop.key" *ngSwitchCase="'select'" class="form-control" required>
+            <option hidden value="" disabled selected> {{prop.label}} را وارد کنید</option>
+            <option *ngFor="let option of prop.options" [value]="option.label">
+              {{option.label}}
+            </option>
+          </select>
+
+          <select [formControlName]="prop.key" *ngSwitchCase="'apiSelect'" class="form-control" required>
+            <option hidden value="" disabled selected> {{prop.label}} را وارد کنید</option>
+            <option *ngFor="let company of companyList" [value]="company.id">
+              {{company.companyName}}
+            </option>
+          </select>
+
+          <ng-container *ngSwitchCase="'radio'">
+            <label *ngFor="let option of prop.options">
+              <input type="radio" [name]="prop.key" [formControlName]="prop.key" [value]="option.value"
+                class="form-control">{{option.label}}
+            </label>
+          </ng-container>
+
+
+          <ng-container class="switchButtonContainer" *ngSwitchCase="'toggle'" class="toggle-switch">
+
+            <span>{{prop.options[0].label}}</span>
+            <label class="toggle-switch">
+              <input type="checkbox" [name]="prop.key" [formControlName]="prop.key" [value]="prop.value">
+              <div class="slider"></div>
+            </label>
+            <span class="mr">{{prop.options[1].label}}</span>
+          </ng-container>
+
+
+        </ng-container>
+
+        <div
+          *ngIf="f.formGroup.controls[prop.key].invalid && (f.formGroup.controls[prop.key].dirty || f.formGroup.controls[prop.key].touched) || (submitted)"
+          class="error-msg">
+
+          <div *ngIf="f.formGroup.controls[prop.key].errors?.['required']">
+            * {{prop.label}} الزامی است.
+          </div>
+          <div *ngIf="f.formGroup.controls[prop.key].errors?.['minlength']">
+            <div *ngFor="let item of prop.validation | keyvalue ">
+              <div *ngIf="item.key ==='minLength'">
+                حداقل کاراکترهای {{prop.label}} باید {{item.value}} باشد.
+              </div>
+            </div>
+          </div>
+          <div *ngIf="f.formGroup.controls[prop.key].errors?.['maxlength']">
+            <div *ngFor="let item of prop.validation | keyvalue ">
+              <div *ngIf="item.key ==='maxLength'">
+                حداکثر کاراکترهای {{prop.label}} باید {{item.value}} باشد.
+              </div>
+            </div>
+          </div>
+          <div *ngIf="f.formGroup.controls[prop.key].errors?.['email']">
+            * {{prop.label}} نامعتبر است.
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+    <div class="btn-container"> <button (click)="onSubmit()" type="submit" *ngIf="styleConfig?.hasSubmitButton"
+        [class]="(styleConfig?.buttonType== 2)?'button-type-two':'button-type-one'">
+        <span></span>{{styleConfig?.buttonLabel}}</button></div>
+
+  </div>
+
+</div>

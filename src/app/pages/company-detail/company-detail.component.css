@@ -1,0 +1,38 @@
+div {
+  margin: 10px;
+}
+
+div table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 10px;
+  z-index: -1000;
+}
+
+div table th, div table td {
+  text-align: center;
+  padding: 8px;
+}
+
+div table th {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+div table th:first-child {
+  border-top-right-radius: 10px;
+}
+
+div table th:last-child {
+  border-top-left-radius: 10px;
+}
+
+div table tr {
+  background-color: var(--table-background);
+}
+
+div table tr .fa {
+  color: gray;
+  cursor: pointer;
+}
+/*# sourceMappingURL=company-detail.component.css.map */

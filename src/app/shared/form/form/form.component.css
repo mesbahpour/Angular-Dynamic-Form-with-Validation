@@ -1,0 +1,199 @@
+.form-group form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.form-group form label {
+  display: block;
+  color: gray;
+}
+
+.form-group form .form-container {
+  margin: 10px;
+}
+
+.form-group form .form-container input:not([type=checkbox]):not([type=radio]) {
+  padding: 5px;
+  color: var(--text);
+  border-radius: 3px;
+  border: 1px solid lightgray;
+  -webkit-box-shadow: 0 1px 1px 0 var(--shadow);
+          box-shadow: 0 1px 1px 0 var(--shadow);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+.form-group form .form-container input:not([type=checkbox]):not([type=radio]).ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.form-group form .form-container input:not([type=checkbox]):not([type=radio]):focus {
+  outline: none;
+  border-color: var(--primary);
+  -webkit-box-shadow: 0 0 3px var(--primary);
+          box-shadow: 0 0 3px var(--primary);
+}
+
+.form-group form .form-container select {
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid var(--border);
+  -webkit-box-shadow: 0 1px 1px 0 var(--shadow);
+          box-shadow: 0 1px 1px 0 var(--shadow);
+  cursor: pointer;
+  outline: 0;
+  background: #fff;
+}
+
+.form-group form .form-container select:required:invalid {
+  color: gray;
+}
+
+.form-group form .form-container select option[value=""][disabled] {
+  display: none;
+}
+
+.form-group form .form-container select option {
+  color: black;
+}
+
+.form-group form .form-container select.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.form-group form .form-container .toggle-switch {
+  height: 10px;
+  width: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+.form-group form .form-container .toggle-switch input {
+  display: none;
+}
+
+.form-group form .form-container .toggle-switch input:checked + .slider {
+  background-color: var(--success-dark);
+}
+
+.form-group form .form-container .toggle-switch input:checked + .slider::after {
+  -webkit-transform: translateX(17px);
+          transform: translateX(17px);
+}
+
+.form-group form .form-container .toggle-switch .slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: grey;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.form-group form .form-container .toggle-switch .slider::after {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: #c5c1c1;
+  left: -2px;
+  bottom: -3px;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.form-group form .form-container button {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.form-group form .form-container .error-msg {
+  font-size: 12px;
+  color: var(--primary);
+}
+
+.form-group .btn-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-group .btn-container button {
+  width: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.form-group .btn-container button.button-type-one {
+  text-align: center;
+  border-radius: 3px;
+  font-weight: bold;
+  border: 2px solid var(--primary);
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.form-group .btn-container button.button-type-one:hover span {
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.form-group .btn-container button.button-type-one span {
+  background-color: var(--primary);
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.form-group .btn-container button.button-type-two {
+  width: 150px;
+  padding: 2px;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: bold;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 1px 1px #eee;
+          box-shadow: 0px 1px 1px #eee;
+  margin: 30px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .form-container {
+    width: 100% !important;
+  }
+}
+
+.mr {
+  margin-right: 3px;
+}
+
+span {
+  color: gray;
+}
+/*# sourceMappingURL=form.component.css.map */

@@ -1,0 +1,51 @@
+{
+  "style": {
+    "hasSubmitButton": true,
+    "hasResetButton": false,
+    "display": "flex",
+    "hasLabel": true,
+    "buttonType" :2,
+    "buttonLabel": "ثبت",
+    "width": "30"
+  },
+  "data": [{
+    "productName": {
+      "label": "نام محصول",
+      "value": "",
+      "type": "text",
+      "validation": {
+        "required": true,
+        "minLength": 3
+      }
+    },
+    "date": {
+      "label": "تاریخ تولید",
+      "value": "",
+      "type": "date",
+      "validation": {
+        "required": true
+      }
+    },
+    "companyId": {
+      "label": "نام شرکت",
+      "value": "",
+      "type": "apiSelect",
+      "endPoint": "company",
+      "validation": {
+        "required": true
+      }
+  },
+    "status": {
+      "label": "وضعیت",
+      "value": true,
+      "type": "toggle",
+      "options": [
+        { "label": "فعال", "value": true},
+        { "label": "غیر فعال", "value": false }
+      ],
+      "validation": {
+        "required": true
+      }
+    }
+}]
+}

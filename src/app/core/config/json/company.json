@@ -1,0 +1,44 @@
+{
+  "style": {
+    "hasSubmitButton": true,
+    "hasResetButton": false,
+    "display": "flex",
+    "hasLabel": true,
+    "buttonType" :2,
+    "buttonLabel": "ثبت",
+    "width": "30"
+  },
+  "data": [
+    {
+    "companyName": {
+      "label": "نام شرکت",
+      "value": "",
+      "type": "text",
+      "validation": {
+        "required": true,
+        "minLength": 3
+      }
+    },
+    "tel": {
+      "label": "تلفن",
+      "value": "",
+      "type": "tel",
+      "validation": {
+        "required": true
+      }
+    },
+    "type": {
+      "label": "گروه",
+      "value": "",
+      "type": "select",
+      "options": [
+        { "label": "محصولات غذایی", "value": "f" },
+        { "label": "لوازم خانگی", "value": "h" },
+        { "label": "لوازم الکترونیکی", "value": "e" }
+      ],
+      "validation": {
+        "required": true
+      }
+    }
+  }]
+}

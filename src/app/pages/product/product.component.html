@@ -1,0 +1,4 @@
+<dynamic-form [formJson]="formConfig" (output)="submit($event)" [styleConfig] ="styleConfig"></dynamic-form> 
+
+<app-dynamic-table [columns]="cols" [data]="data" [faColumns]="faColumns" *ngIf="isEmpty"></app-dynamic-table>
+

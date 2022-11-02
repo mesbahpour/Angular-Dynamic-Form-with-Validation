@@ -1,0 +1,14 @@
+<div>
+  <table>
+    <tr>
+      <th *ngIf="hasDetailButton"></th>
+      <th *ngFor="let col of faColumns; let i = index">
+        {{ col }}
+      </th>
+    </tr>
+    <tr *ngFor="let item of data">
+      <td (click)="showDetail(item.id)" *ngIf="hasDetailButton"><i class="fa fa-plus"></i></td>
+      <td *ngFor="let column of columns">{{ item[column] }}</td>
+    </tr>
+  </table>
+</div>
